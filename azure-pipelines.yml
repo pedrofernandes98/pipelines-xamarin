@@ -27,15 +27,15 @@ jobs:
       configuration: '$(buildConfiguration)'
       msbuildVersionOption: '16.0'
 
-  - task: AndroidSigning@3
-    inputs:
-      apksign: false
-      zipalign: false
-      apkFiles: '$(outputDirectory)/*.apk'
+  # - task: AndroidSigning@3
+  #   inputs:
+  #     apksign: false
+  #     zipalign: false
+  #     apkFiles: '$(outputDirectory)/*.apk'
 
-  - task: PublishBuildArtifacts@1
-    inputs:
-      pathtoPublish: '$(outputDirectory)'
+  # - task: PublishBuildArtifacts@1
+  #   inputs:
+  #     pathtoPublish: '$(outputDirectory)'
 
 # - job: iOS
 #   pool:
